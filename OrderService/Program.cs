@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using CustomerService;
+using GrpcCustomerService;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddGrpcClient<CustomerService.Customer.CustomerClient>(o =>
+builder.Services.AddGrpcClient<GrpcCustomerService.Customer.CustomerClient>(o =>
 {
     o.Address = new Uri("https://localhost:5001"); // URL of CustomerService
 });

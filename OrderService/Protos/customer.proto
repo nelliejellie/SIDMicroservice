@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "CustomerService";
+option csharp_namespace = "GrpcCustomerService";
 
 service Customer {
   rpc GetCustomer (CustomerRequest) returns (CustomerResponse);

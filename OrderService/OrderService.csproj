@@ -22,11 +22,15 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
-    <Protobuf Include="Protos/customer.proto" GrpcServices="Client" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CustomerService\CustomerService.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos/Customer.proto" GrpcServices="Client" />
+</ItemGroup>
+
 
 </Project>
