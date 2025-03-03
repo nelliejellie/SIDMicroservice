@@ -11,7 +11,7 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddGrpcClient<GrpcCustomerService.Customer.CustomerClient>(o =>
 {
-    o.Address = new Uri("https://localhost:5001"); // URL of CustomerService
+    o.Address = new Uri("http://localhost:5081");// URL of CustomerService
 });
 
 // Add DbContext
