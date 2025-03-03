@@ -15,7 +15,7 @@ public class OrderController : ControllerBase
         _customerClient = customerClient;
     }
 
-     [HttpGet("{id}")]
+     [HttpGet("getcustomer/{id}")]
      public async Task<IActionResult> GetCustomer(int id)
      {
          var request = new GrpcCustomerService.CustomerRequest { CustomerId = id };
